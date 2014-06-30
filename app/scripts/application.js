@@ -12,9 +12,12 @@ console.log('application.js')
 var Todos = Ember.Application.create();
 // Had to search for this: Todos.Store needed to be defined in order to run the above
 // Has to do with ember-data
-Todos.Store = DS.Store.extend();
+// Todos.Store = DS.Store.extend();
 
 //Adapters are responsible for communicating with a source of data for your application. 
 // Typically this will be a web service API, but in this case we are using an adapter 
 // designed to load fixture data:
-Todos.ApplicationAdapter = DS.FixtureAdapter.extend();
+// Todos.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+Todos.Store = DS.Store.extend(); 
+Todos.ApplicationAdapter = DS.FixtureAdapter;
